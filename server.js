@@ -2,7 +2,7 @@ const express = require("express");
 const routes = require("./routes");
 const db = require("./db");
 const logger = require("morgan");
-
+const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
 const app = express();
