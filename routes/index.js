@@ -5,7 +5,7 @@ const router = Router();
 router.get("/", (req, res) => res.send("this is the root!"));
 
 //view page
-router.get("/home", (req, res) => res.render("index"));
+// router.get("/home", (req, res) => res.render("index"));
 
 // it is the different method and post it in the same route.
 router.post("/main", controllers.createCategory);
