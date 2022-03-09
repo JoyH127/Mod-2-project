@@ -4,7 +4,7 @@ const Category = require("../models/category");
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const main = async () => {
-  const categories = [
+  const Categories = [
     {
       name: "Accessories",
       url: "https://paypal.com",
@@ -23,7 +23,7 @@ const main = async () => {
     },
   ];
 
-  await Category.insertMany(categories);
+  await Category.insertMany(Categories);
   console.log("Created categories");
 };
 
