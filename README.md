@@ -25,14 +25,12 @@ Step 4: Connect to your MongoDB Atlas Cluster
 - Click the `Connect` button.
 - Click `Connect your application.`
 - Replace the password with your password from the MongoDB set.
-ex) 
-
-`mongodb+srv://**userID**:**Password**@onlineshopping.86vim.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
-
 - Go to Your Heroku App setting and add your key and value in Config Vars.
+```
 Key -> MONGODB_URI
 value -> `mongodb+srv://**userID**:**Password**@onlineshopping.86vim.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
+```
 **Step 5: Set a MONGODB_URI config var** 
 
 ```
@@ -138,3 +136,7 @@ const Review = new Schema(
   { timestamps: true }
 );
 ```
+
+ Hosted On Heroku
+ 
+ Link: https://joyhpro.herokuapp.com/
