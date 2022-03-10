@@ -2,7 +2,7 @@ const { Router } = require("express");
 const controllers = require("../controllers");
 const router = Router();
 
-router.get("/", (req, res) => res.send("this is the root!"));
+router.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
 
 //view page
 // router.get("/home", (req, res) => res.render("index"));
