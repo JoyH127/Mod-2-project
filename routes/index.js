@@ -1,11 +1,9 @@
 const { Router } = require("express");
 const controllers = require("../controllers");
 const router = Router();
-
-router.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
-
-//view page
-// router.get("/home", (req, res) => res.render("index"));
+//replace your route in here.
+router.get("/", (req, res) => res.send("this is the root!"));
+const directory_route = "/Users/joyhwang/e-commerce-joy-/view";
 
 // it is the different method and post it in the same route.
 router.post("/main", controllers.createCategory);
@@ -29,6 +27,13 @@ router.get("/product", controllers.getAllProducts);
 router.get("/product/:id", controllers.getProductById);
 router.put("/product/:id", controllers.updateProduct);
 router.delete("/product/:id", controllers.deleteProduct);
+
+router.get("/home", (req, res) => {
+  res.sendFile(directory_route + "/index.html");
+});
+router.get("/detail.html", (req, res) =>
+  res.sendFile(directory_route + "/detail.html")
+);
 
 //Review
 router.post("/review", controllers.createReview);

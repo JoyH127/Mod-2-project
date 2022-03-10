@@ -5,8 +5,9 @@ const logger = require("morgan");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
-
 app.use(express.json());
+// solve MIME type (“text/html”) mismatch problem
+app.use(express.static("view"));
 app.use(express.urlencoded({ extended: false }));
 app.use(logger("dev"));
 app.use("/", routes);
