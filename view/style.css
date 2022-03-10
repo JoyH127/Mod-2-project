@@ -1,0 +1,68 @@
+/* navigation */
+.body {
+  font-family: montserrat;
+}
+.nav {
+  list-style-type: none;
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid rgb(85, 85, 85);
+}
+a {
+  color: black;
+  text-decoration: none;
+  float: left;
+  padding: 0 10px 0 10px;
+  transition: 0.5s;
+}
+.nav a:hover {
+  color: goldenrod;
+}
+/* body section */
+section {
+  display: flex;
+}
+.card1 {
+  margin-left: 20px;
+  position: relative;
+  border: 1px black solid;
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card1 a {
+  display: none;
+}
+.info {
+  position: absolute;
+  background-color: rgb(213, 213, 213);
+  height: 70px;
+  width: 200px;
+  top: 230px;
+  font-size: 13px;
+}
+.info p {
+  padding-left: 30px;
+  width: 150px;
+}
+.card1:hover a {
+  display: block;
+  margin: 130px 0 0 40px;
+  color: white;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.card1:hover {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.406);
+  transition: 1s;
+}
+.card1:hover .info {
+  display: none;
+  transition: 1s;
+}
+.card1 img {
+  height: 300px;
+}
